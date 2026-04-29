@@ -1,0 +1,10 @@
+dataset:
+  name: YangXiao-nlp/DynToM
+
+episode_builder:
+  support_size: 8
+  # Support is constructed from earlier scenarios / trajectory segments; query uses later ones.
+  support_is_prefix: true
+
+cache_dir: null
+

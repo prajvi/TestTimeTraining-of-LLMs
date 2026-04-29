@@ -1,0 +1,6 @@
+model:
+  # Placeholder. Replace with your preferred Qwen 7B instruct model id.
+  name_or_path: YOUR_QWEN_7B_INSTRUCT_MODEL
+  trust_remote_code: false
+  dtype: bfloat16
+

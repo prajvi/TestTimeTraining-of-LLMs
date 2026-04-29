@@ -1,0 +1,10 @@
+dataset:
+  name: ZeroXeno/CharToM-QA
+
+episode_builder:
+  # Optional long-context / indirect-context stress test.
+  support_size: 8
+  support_is_prefix: true
+
+cache_dir: null
+

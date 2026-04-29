@@ -1,0 +1,6 @@
+model:
+  # Default easy-to-run target used in early sanity experiments.
+  name_or_path: meta-llama/Llama-3.1-8B-Instruct
+  trust_remote_code: false
+  dtype: bfloat16
+

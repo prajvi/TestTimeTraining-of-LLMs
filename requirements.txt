@@ -1,0 +1,15 @@
+transformers
+datasets
+peft
+accelerate
+numpy
+sentencepiece
+scikit-learn
+pandas
+matplotlib
+seaborn
+tqdm
+pyyaml
+python-docx
+torch
+

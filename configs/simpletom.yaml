@@ -1,0 +1,17 @@
+dataset:
+  name: allenai/SimpleToM
+  subsets:
+    mental_state: mental-state-qa
+    behavior: behavior-qa
+    judgment: judgment-qa
+
+episode_builder:
+  scenario_family_key: scenario_name
+  support_size: 8
+  query_types:
+    mental_state: mental_state
+    behavior: behavior
+    judgment: judgment
+
+cache_dir: null
+

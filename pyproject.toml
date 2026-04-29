@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsttt"
+version = "0.1.0"
+description = "Belief-State Test-Time Training (BSTTT) for Dynamic Social Reasoning in LLMs"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Anonymous Authors" }]
+dependencies = [
+  "transformers",
+  "datasets",
+  "peft",
+  "accelerate",
+  "sentencepiece",
+  "scikit-learn",
+  "pandas",
+  "matplotlib",
+  "seaborn",
+  "tqdm",
+  "pyyaml",
+  "python-docx",
+  "torch"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["bsttt*"]
