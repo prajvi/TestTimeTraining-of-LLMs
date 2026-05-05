@@ -1,7 +1,7 @@
 """
-Prompt-only baselines for SimpleToM (Milestone 4).
+Prompt-only baselines for SimpleToM evaluation.
 
-Supports:
+Supported prompt strategies:
   1. vanilla: direct QA prompt, no extra reasoning (same scoring as frozen)
   2. cot: chain-of-thought ("Let's think step by step") with generation + parsing
   3. ms_reminder: inject predicted mental-state into behavior/judgment prompts

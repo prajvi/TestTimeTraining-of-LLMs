@@ -1,11 +1,12 @@
-# Included Artifacts
+# Artifacts
 
-This directory is reserved for lightweight review artifacts.
+This directory is reserved for evaluation outputs and analysis artifacts.
 
-In this anonymous repo, the main bundled artifacts are:
+When running experiments, results are saved to the `outputs/` directory by default.
+This directory can be used to store post-processed analysis outputs such as:
 
-- figure assets under `paper/`
-- the anonymous manuscript source under `paper/`
-- the recovered model-wise appendix table under `docs/all_results_modelwise_latex_2026-04-22.tex`
+- Aggregated comparison tables (CSV/Markdown)
+- Figures generated from results
+- Exported tables for the manuscript
 
-Large raw outputs and caches are intentionally omitted from this submission-safe copy.
+Large raw outputs and model caches are excluded via `.gitignore`.

@@ -1,10 +1,12 @@
 """
-SimpleToM evaluation: frozen and prompt baselines (Milestone 3 + 4).
+SimpleToM evaluation entry point.
 
-Methods:
+Supported methods:
   - frozen / vanilla: multiple-choice scoring (log-likelihood)
   - cot: chain-of-thought prompt + answer-option scoring
   - ms_reminder: inject predicted mental-state into behavior/judgment prompts
+  - bsttt: episodic LoRA adaptation (action reconstruction or next-token loss)
+  - ms_reminder_bsttt: composed prompting + adaptation
 """
 
 from __future__ import annotations
@@ -511,7 +513,7 @@ def save_qualitative_examples(
     out_path: Path,
     n_per_task: int = 2,
 ) -> None:
-    """Save a few formatted examples for inspection (Milestone 4)."""
+    """Save a few formatted examples for qualitative inspection."""
     by_task: Dict[str, List[Dict[str, Any]]] = {}
     for p in predictions:
         t = p.get("query_task", "unknown")
@@ -759,7 +761,7 @@ def main() -> None:
     pred_path = pred_dir / f"simpletom_{args.method}_{ts}.jsonl"
     save_predictions(predictions, pred_path)
 
-    # Save qualitative examples (Milestone 4)
+    # Save qualitative examples
     qual_path = pred_dir / f"simpletom_{args.method}_qualitative_{ts}.md"
     save_qualitative_examples(predictions, qual_path, n_per_task=2)
 

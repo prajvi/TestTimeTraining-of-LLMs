@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Aggregate SimpleToM evaluation summaries into a comparison table (Milestone 4).
+Aggregate SimpleToM evaluation summaries into a comparison table.
 
 Usage:
   python scripts/aggregate_comparison_table.py outputs/simpletom_*_summary_*.json

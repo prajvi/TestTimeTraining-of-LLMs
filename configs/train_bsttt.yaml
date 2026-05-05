@@ -1,5 +1,5 @@
 train:
-  # Recommended defaults from the project blueprint.
+  # Default hyperparameters (used for all results in the paper).
   support_size: 8
   adapt_steps: 3
   lr: 1e-4
@@ -19,10 +19,9 @@ train:
   # Reproducibility
   seed: 42
 
-  # Which objective(s) to use (used by BSTTT trainer / ablations)
+  # Objective function
   loss:
     name: action_reconstruction
-    # For V2/V3 experiments, set to:
-    # - action_reconstruction_plus_consistency
-    # - action_reconstruction_plus_consistency_plus_temporal
-
+    # Alternatives:
+    #   next_token_loss              — generic TTT control
+    #   action_reconstruction_plus_consistency — AR + belief-action consistency

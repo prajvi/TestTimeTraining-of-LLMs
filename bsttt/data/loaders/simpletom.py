@@ -1,7 +1,7 @@
 """
 SimpleToM loader.
 
-This milestone normalizes the Hugging Face `allenai/SimpleToM` dataset into a common schema:
+Normalizes the Hugging Face `allenai/SimpleToM` dataset into a common schema:
 
 {
   "id": ...,

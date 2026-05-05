@@ -33,7 +33,7 @@ class BSTTTLoRAConfig:
     lora_rank: int = 8
     lora_alpha: int = 16
     lora_dropout: float = 0.0
-    # BSTTT Milestone 7: Temporal Smoothness
+    # Temporal smoothness regularization (experimental)
     enable_temporal_smoothness: bool = False
     temporal_smoothness_weight: float = 0.5
     # BSTTT V2: belief-action consistency
@@ -247,7 +247,7 @@ class BSTTTLoRATrainer:
         hidden_states_list: List[torch.Tensor],
     ) -> torch.Tensor:
         """
-        Milestone 7: L_sm = sum || z_{t+1} - z_t ||^2
+        Temporal smoothness loss: L_sm = sum || z_{t+1} - z_t ||^2.
         Encourages representations to be smooth over time.
         """
         if len(hidden_states_list) < 2:
